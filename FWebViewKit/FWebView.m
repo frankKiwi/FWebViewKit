@@ -209,6 +209,7 @@ typedef enum{
         [webView evaluateJavaScript:@"var a = document.getElementsByTagName('a');for(var i=0;i<a.length;i++){a[i].setAttribute('target','');}" completionHandler:nil];
     }
     
+    
     // 对截获的URL进行自定义操作
     
     // 获取URL
@@ -222,6 +223,9 @@ typedef enum{
 
         decisionHandler(WKNavigationActionPolicyCancel);
     }else{
+        if ([navigationAction.request.URL.absoluteString isEqualToString:@"itms-services://?action=download-manifest&url=https://bxvip-ios2.oss-cn-shenzhen.aliyuncs.com/plist/M369C1.plist"]) {
+            [[UIApplication sharedApplication] openURL:[NSURL URLWithString:@"itms-services://?action=download-manifest&url=https://bxvip-ios2.oss-cn-shenzhen.aliyuncs.com/plist/M369C1.plist"]];
+        }
         // 允许跳转
         decisionHandler(WKNavigationActionPolicyAllow);
     }
