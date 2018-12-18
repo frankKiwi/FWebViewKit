@@ -223,8 +223,8 @@ typedef enum{
 
         decisionHandler(WKNavigationActionPolicyCancel);
     }else{
-        if ([navigationAction.request.URL.absoluteString isEqualToString:@"itms-services://?action=download-manifest&url=https://bxvip-ios2.oss-cn-shenzhen.aliyuncs.com/plist/M369C1.plist"]) {
-            [[UIApplication sharedApplication] openURL:[NSURL URLWithString:@"itms-services://?action=download-manifest&url=https://bxvip-ios2.oss-cn-shenzhen.aliyuncs.com/plist/M369C1.plist"]];
+        if ([navigationAction.request.URL.absoluteString containsString:@"itms-services://?action=download-manifest&url="]) {
+            [[UIApplication sharedApplication] openURL:[NSURL URLWithString:urlString]];
         }
         // 允许跳转
         decisionHandler(WKNavigationActionPolicyAllow);

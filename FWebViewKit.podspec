@@ -16,7 +16,7 @@ Pod::Spec.new do |s|
   #
 
   s.name         = "FWebViewKit"
-  s.version      = "0.0.1"
+  s.version      = "1.0.0"
   s.summary      = "网页加载工具 FWebViewKit."
 
   # This description is used to generate tags and improve search results.
