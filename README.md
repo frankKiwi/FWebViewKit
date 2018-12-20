@@ -1,7 +1,7 @@
 # FWebViewKit
 加载webview的  工具
 
-pod 'FWebViewKit', '~> 0.0.1'
+pod 'FWebViewKit', '~> 1.0.1'
 
 1./**
  通过网页链接初始化
